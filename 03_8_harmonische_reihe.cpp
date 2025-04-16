@@ -24,4 +24,8 @@ double h_i(int n) {
 int main() {
     std::cout << h_i(3) << std::endl;
     std::cout << h_r(3) << std::endl;
+    /* 
+    1.83333
+    1.83333
+    */
 }
