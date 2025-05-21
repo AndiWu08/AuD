@@ -46,9 +46,5 @@ int main() {
     quickSort(arr, 0, size - 1);
 
     cout << "Sorted array:   ";
-    printArray(arr, size);
-
-    int arr2[9] = {0, 10, 20, 1, 11, 21, 2, 12, 22};
-    partition(arr2, 0, 8);
-    printArray(arr2, 9);    
+    printArray(arr, size);  
 }
