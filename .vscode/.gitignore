@@ -1,0 +1,12 @@
+# Exclude all .exe files
+*.exe
+
+# Also exclude other common build artifacts
+*.o
+*.out
+*.dll
+bin/
+obj/
+build/
+Debug/
+Release/
