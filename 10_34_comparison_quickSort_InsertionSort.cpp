@@ -48,4 +48,9 @@ int main() {
     std::cout << "Quick Sort arr1:" << dur_qs1.count() << " Sekunden" << std::endl;
     std::cout << "Insertion Sort arr2:" << dur_in2.count() << " Sekunden" << std::endl;
     std::cout << "Quick Sort arr2:" << dur_qs2.count() << " Sekunden" << std::endl;
+
+    /*
+    bei dem kleineren array ist insertion sort schneller
+    bei dem größeren array ist quick sort schneller
+    */
 }
