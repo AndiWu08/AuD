@@ -3,7 +3,16 @@ using namespace std;
 
 // Partition function using last element as pivot
 int partition(int arr[], int low, int high) {
+    // choose random index and make it the pivot element
+    // int randomIndex = low + rand() % (high - low +1);
+    // swap(arr[randomIndex], arr[high]);
+
+    // choose median as pivot
+    int medianIndex = (low + high) / 2;
+    swap(arr[medianIndex], arr[high]);
+
     int pivot = arr[high];  // Choose last element as pivot
+
     int i = low - 1;        // Index of smaller element
 
     for (int j = low; j < high; j++) {

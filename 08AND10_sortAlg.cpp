@@ -69,3 +69,43 @@ void printArray(int arr[], int size) {
         cout << arr[i] << " ";
     cout << endl;
 }
+
+#include <iostream>
+using namespace std;
+
+// Partition function using last element as pivot
+int partition(int arr[], int low, int high) {
+    // choose random index and make it the pivot element
+    // int randomIndex = low + rand() % (high - low +1);
+    // swap(arr[randomIndex], arr[high]);
+
+    // choose median as pivot
+    int medianIndex = (low + high) / 2;
+    swap(arr[medianIndex], arr[high]);
+
+    int pivot = arr[high];  // Choose last element as pivot
+
+    int i = low - 1;        // Index of smaller element
+
+    for (int j = low; j < high; j++) {
+        // If current element is smaller than pivot
+        if (arr[j] < pivot) {
+            i++;  // Increment index of smaller element
+            swap(arr[i], arr[j]);
+        }
+    }
+    swap(arr[i + 1], arr[high]);
+    return i + 1;  // Return partition index
+}
+
+// Main Quick Sort function
+void quickSort(int arr[], int low, int high) {
+    if (low < high) {
+        // pi is partitioning index
+        int pi = partition(arr, low, high);
+
+        // Recursively sort elements before and after partition
+        quickSort(arr, low, pi - 1);
+        quickSort(arr, pi + 1, high);
+    }
+}
